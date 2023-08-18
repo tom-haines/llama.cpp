@@ -138,10 +138,10 @@
   <script type="module">
     import {
       html, h, signal, effect, computed, render, useSignal, useEffect, useRef
-    } from '/index.js';
+    } from '/llmaq/index.js';
 
-    import { llama } from '/completion.js';
-    import { SchemaConverter } from '/json-schema-to-grammar.mjs';
+    import { llama } from '/llmaq/completion.js';
+    import { SchemaConverter } from '/llmaq/json-schema-to-grammar.mjs';
 
     const session = signal({
       prompt: "This is a conversation between user and llama, a friendly chatbot. respond in simple markdown.",
@@ -618,7 +618,6 @@
 
           <footer>
             <p><${ModelGenerationInfo} /></p>
-            <p>Powered by <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> and <a href="https://ggml.ai">ggml.ai</a>.</p>
           </footer>
         </div>
       `;
